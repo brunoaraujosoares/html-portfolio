@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno Araújo Soares - software developer, data analyst and advertiser all in one</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-text">
+      <h1>Bruno Araújo Soares</h1>
+      <h2>Software developer, data analyst and advertiser</h2>
+    </div>
+    <div class="header-links">
+      <nav>
+        <a href="#about">about</a>
+        <a href="#portfolio">portfolio</a>
+        <a href="#contact">contact</a>
+          
+        <ul id="social">
+          <li><a href="https://www.youtube.com/@dscreative-datadrivenideas" class="fa fa-youtube" target="_blank">
+            <span class="visually-hidden">YouTube channel where I post videos about IT-related topics</span></a></li>
+          <li><a href="https://www.linkedin.com/in/bruno-araujo-soares/" class="fa fa-linkedin" target="_blank">
+            <span class="visually-hidden">LinkedIn profile of Bruno Araújo Soares</span></a></li>
+          <li><a href="https://www.instagram.com/brunolucidooficial/" class="fa fa-instagram" target="_blank">
+            <span class="visually-hidden">My personal Instagram. Take care!</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+  </main>
+  <h3 style="color: #535353; text-align: center;">Some of my latest work</h3>  
+  <style>
+    #portfolio {
+
+      margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f9f9f9;
+        text-align: center;
+    }
+
+    #portfolio h3 {
+        margin-bottom: 20px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .grid div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    img, video {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+</style>
+
+
+  <section id="portfolio">
+    
+    <div class="grid">
+      <div id="atende">
+        <a href="p1.html"><img src="img/p1.jpg" alt="Captura de tela de um sistema de gerenciamento de visitantes (VSM)"></a>
+      </div>
+      <div id="birthday-invitation">
+        <a href="birthday-invite.html"><img src="img/convite-antonio.jpg" alt="Miniatura do Convite de Antônio"></a>
+      </div>
+      <div id="birthday-invitation-animated">
+        <video id="myVideo" width="320" controls>
+          <source src="img/video.mp4" type="video/mp4">
+          Seu navegador não suporta o elemento de vídeo.
+        </video>
+
+        <script>
+          const video = document.getElementById('myVideo');
+          video.volume = 0.35;
+        </script>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <a name="contact">
+
+
+    </a>
+    <span id="contact-info"></span>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          // Dados codificados com um hash simples
+          const emailHash = "6272756e6f617261756a6f736f6172657340676d61696c2e636f6d";
+          const whatsappHash = "37312039393932342033303130";
+
+          // Função para converter um hash hexadecimal em texto legível
+          function hexToText(hex) {
+              return hex.match(/.{1,2}/g).map(byte => String.fromCharCode(parseInt(byte, 16))).join('');
+          }
+
+          // Decodificar os dados
+          const email = hexToText(emailHash);
+          const whatsapp = hexToText(whatsappHash);
+
+          // Exibir as informações na página
+          const contactContainer = document.getElementById("contact-info") ;
+          contactContainer.innerHTML = `E-mail: ${email} <br>\nWhatsapp: ${whatsapp}`;
+      });
+  </script>
+  </footer>
+</body>
+</html>
+<!-- <script>
+  const email = "email@email.com";
+const hash = email.split('').map(char => char.charCodeAt(0).toString(16)).join('');
+document.write(hash); 
+</script>//-->

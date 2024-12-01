@@ -1,0 +1,209 @@
+
+/* Estilos básicos */
+
+/* Importando a fonte Cabin */
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap');
+
+/* font template info
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 700
+
+.cabin-<uniquifier> {
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+ */
+
+body {
+    font-family: 'Cabin', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #e3e0d7;
+}
+
+h1 {
+    color: #5c5b5b;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #737373;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    color: #737373;
+}
+
+header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    max-height: 110px;
+    overflow: hidden;
+
+    align-items: center;
+    background: #e3e0d7;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.header-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+header, section {
+    padding: 15px;
+}
+
+header ul ,header ul li, #designer ul, #designer ul li, #coder ul, #coder  ul li {
+    display: inline ;
+}
+
+nav{
+    margin-right: 30px;
+}
+
+nav a {
+    margin: 10px ;
+    font-size: 24px;
+    color:rgb(126, 63, 18);
+    text-decoration: none ;
+}   
+#social {
+    margin-left: 20px;
+}
+#social li a {
+    margin: 5px;
+}
+nav a:hover {
+    text-decoration: underline ;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px;
+}
+
+
+main {
+    height: 750px;
+    background-color: #ccc5bb;
+    background-image: url(../img/bg_main.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+
+footer{
+    height:200px;
+    background-color: rgb(56, 29, 19);
+        color: #fff; /* Texto branco */
+        display: flex;
+        justify-content: center; /* Alinhamento horizontal */
+        align-items: center; /* Alinhamento vertical */
+        height: 100px; /* Altura fixa do footer */
+        text-align: center;
+    }
+
+
+
+/* icons */
+.fa {
+    padding: 18px;
+    font-size: 1.6em !important;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* linkedin */
+.fa-linkedin {
+    background: #0a66c2;
+    color: white;
+  }
+.fa-instagram {
+    background: #f33040;
+    color: white;
+  }
+  .fa-youtube {
+    background: #CC0000;
+    color: white;
+  }
+
+  
+/* Media Queries para responsividade */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    h2 {
+        font-size: 0.8em;
+    }
+    
+    nav a {
+        font-size: 0.9em;
+
+    }
+
+    header, section {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .fa {
+        padding: 9px;
+        font-size: 0.9em !important;
+        width: 13px;
+        height: 13px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+      }
+}
